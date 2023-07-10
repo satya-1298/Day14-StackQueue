@@ -27,5 +27,32 @@ namespace Stack_Queue
             }
             Console.WriteLine(node.data);
         }
+        public void Dequeue()
+        {
+           
+            if (head == null)
+            {
+                Console.WriteLine("Queue is Empty");
+            }
+            while (head != null) 
+            {
+                Console.WriteLine("Element is "+head.data);
+                head = head.next;
+            }
+        }
+        public void Display()
+        {
+            Node temp = head;
+            if (temp == null)
+            {
+                Console.WriteLine("Queue is Empty");
+                return;
+            }
+            while (temp != null)
+            {
+                Console.WriteLine(temp.data);
+                temp = temp.next;
+            }
+        }
     }
 }
