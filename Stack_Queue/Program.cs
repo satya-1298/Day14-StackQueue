@@ -13,9 +13,11 @@ namespace Stack_Queue
             StackLinkedList stackLinkedList = new StackLinkedList();
             while (true)
             {
+                Console.WriteLine("****************");
                 Console.WriteLine("Choose the below options");
                 Console.WriteLine("1-Inserting Elements in Stack");
                 Console.WriteLine("2-Peek the Element");
+                Console.WriteLine("3-Inserting elements in Queue");
                 int option =Convert.ToInt32(Console.ReadLine());
                 switch(option) 
                 {
@@ -32,6 +34,14 @@ namespace Stack_Queue
                         Console.WriteLine("****************");
                         stackLinkedList.Display();
                         Console.WriteLine("****************");
+                        break;
+                    case 3:
+                        Console.WriteLine("Queue Insertion");
+                        QueueLinkedList queueLinkedList = new QueueLinkedList();
+                        Console.WriteLine("****************");
+                        queueLinkedList.Enqueue(56);
+                        queueLinkedList.Enqueue(30);
+                        queueLinkedList.Enqueue(70);
                         break;
                     default: Console.WriteLine("Enter Invalid Option");
                         break;
